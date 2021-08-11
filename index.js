@@ -7,6 +7,8 @@ let initted = false;
 
 const sphinxToken = process.env.SPHINX_TOKEN;
 
+const PREFIX = "example";
+
 function init() {
   if (initted) return;
   initted = true;
@@ -15,6 +17,7 @@ function init() {
   client.login(sphinxToken);
 
   client.on(msg_types.INSTALL, async (message) => {
+    console.log("=> Received an install!");
     const embed = new Sphinx.MessageEmbed()
       .setAuthor("ExampleBot")
       .setDescription("Welcome to Example Bot!")
@@ -23,9 +26,10 @@ function init() {
   });
 
   client.on(msg_types.MESSAGE, async (message) => {
+    console.log("=> Received a message!");
     const arr = message.content.split(" ");
     if (arr.length < 2) return;
-    if (arr[0] !== "/example") return;
+    if (arr[0] !== "/" + PREFIX) return;
     const cmd = arr[1];
 
     const isAdmin = message.member.roles.find((role) => role.name === "Admin");
@@ -44,11 +48,11 @@ function init() {
         return;
 
       default:
-        const embed = new Sphinx.MessageEmbed()
+        const embed2 = new Sphinx.MessageEmbed()
           .setAuthor("ExampleBot")
           .setTitle("ExampleBot Commands:")
           .addFields([{ name: "test", value: "/example test" }]);
-        message.channel.send({ embed });
+        message.channel.send({ embed: embed2 });
         return;
     }
   });

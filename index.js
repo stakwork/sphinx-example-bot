@@ -20,8 +20,7 @@ function init() {
     console.log("=> Received an install!");
     const embed = new Sphinx.MessageEmbed()
       .setAuthor("ExampleBot")
-      .setDescription("Welcome to Example Bot!")
-      .setThumbnail(botSVG);
+      .setDescription("Welcome to Example Bot!");
     message.channel.send({ embed });
   });
 
@@ -39,7 +38,7 @@ function init() {
       case "test":
         const embed = new Sphinx.MessageEmbed()
           .setAuthor("ExampleBot")
-          .setTitle("A Test:")
+          .setTitle("A Test!!!!!")
           .addFields([
             { name: "Hi:", value: "Hello", inline: true },
             { name: "Hi 2:", value: "Hello 2", inline: true },

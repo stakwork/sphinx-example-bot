@@ -12,4 +12,6 @@ An example of how to create bots on Sphinx.
 
 ### create a bot in your Sphinx app
 
+Create a bot called `Example`.
+
 For local dev on `sphinx-stack`, set the Bot Webhook to `http://host.docker.internal:3333`. Take the Bot Token, and put it in a `.env` file like `SPHINX_TOKEN=*******`. Also add `PORT=3333` to the `.env`

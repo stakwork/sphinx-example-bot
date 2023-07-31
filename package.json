@@ -13,16 +13,16 @@
   "author": "Evan Feenstra",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "regenerator-runtime": "^0.13.7",
-    "sphinx-bot": "^0.2.19"
+    "dotenv": "^16.3.1",
+    "regenerator-runtime": "^0.13.11",
+    "sphinx-bot": "^0.2.39"
   },
   "devDependencies": {
-    "@babel/cli": "7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/node": "^7.10.5",
-    "@babel/polyfill": "7.0.0",
-    "@babel/preset-env": "7.1.0"
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "^7.22.9",
+    "@babel/node": "^7.22.6",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.22.9"
   },
   "babel": {
     "presets": [

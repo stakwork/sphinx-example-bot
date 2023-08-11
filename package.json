@@ -1,32 +1,24 @@
 {
   "name": "sphinx-example-bot",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Sphinx Example Bot",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf build && mkdir build",
-    "build-babel": "babel -d ./build ./index.js -s",
-    "build": "npm run clean && npm run build-babel",
-    "start": "node ./build/index.js",
+    "dev": "nodemon src/index.ts",
+    "build": "rm -rf ./build && tsc",
+    "start": "npm run build && node build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Evan Feenstra",
   "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.4.9",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
   "dependencies": {
     "dotenv": "^16.3.1",
-    "regenerator-runtime": "^0.13.11",
-    "sphinx-bot": "^0.2.39"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.22.9",
-    "@babel/core": "^7.22.9",
-    "@babel/node": "^7.22.6",
-    "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.22.9"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
+    "sphinx-bot": "^0.2.41"
   }
 }
